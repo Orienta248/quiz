@@ -26,7 +26,7 @@ class Quiz extends Component {
             });
         }
         this.setState({
-            responses: this.setState.responses < 5 ? this.state.responses + 1 : 5
+            responses: this.state.responses < 5 ? this.state.responses + 1 : 5
         });
     };
     playAgain = () => {
