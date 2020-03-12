@@ -12,6 +12,7 @@ class Quiz extends Component {
         score: 0,
         responses: 0
     };
+
     getQuestions = () => {
         quizService().then(question => {
             this.setState({
@@ -19,6 +20,7 @@ class Quiz extends Component {
             });
         });
     };
+
     computeAnswer = (answer, correctAnswer) => {
         if (answer === correctAnswer) {
             this.setState({
@@ -29,6 +31,7 @@ class Quiz extends Component {
             responses: this.state.responses < 5 ? this.state.responses + 1 : 5
         });
     };
+
     playAgain = () => {
         this.getQuestions();
         this.setState({
@@ -36,9 +39,11 @@ class Quiz extends Component {
             responses: 0
         });
     };
+
     componentDidMount() {
         this.getQuestions();
     }
+    
     render()  {
         return (
             <div className="container">
