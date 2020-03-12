@@ -1,12 +1,11 @@
 ### Project Setup
 
-Install Create React App globally:
+# Install Create React App globally:
 $ npm install -g create-react-app@3.0.1
 
-Generate a new app:
-
-$ create-react-app sample
-$ cd sample
+# Generate a new app:
+$ create-react-app quiz
+$ cd quiz
 
 
 ### Docker Setup
@@ -34,11 +33,10 @@ CMD ["npm", "start"]
 node_modules
 
 # Build and tag the Docker image:
-
-$ docker build -t sample:dev .
+$ docker build -t quiz:dev .
 
 ### Start Container
-$ docker run -v ${PWD}:/app -v /app/node_modules -p 3001:3000 --rm sample:dev
+$ docker run -v ${PWD}:/app -v /app/node_modules -p 3001:3000 --rm quiz:dev
 
 *Build the image and fire up the container:
 $ docker-compose up -d --build
